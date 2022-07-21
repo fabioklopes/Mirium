@@ -1,33 +1,281 @@
 * {
-    margin: 0;
     padding: 0;
-    font-family: 'Arial';
-    font-size: 1rem;
+    margin: 0;
+    font-family: 'Nunito';
+    font-size: 1em;
+    scroll-behavior: smooth;
 }
 
-body {
-    background-color: #ccc;
-}
-
-
-#container {
+/* estilos do menu principal */
+.flex-container {
     display: flex;
-    width: 20%;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    background-color: #aaa;
-    border-radius: 20px;
-    padding: 15px;
+    background: #222;
+    /* position: fixed; */
+    width: 100%;
 }
 
-.form-control {
+.logo {
+    color: #fff;
+    font-size: 2em;
+    margin-left: 1em;
+}
+
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.logo a:hover {
+    color: #999;
+    transition: 0.4s;
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navigation li {
+    list-style: none;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 1em;
+}
+
+.navigation a {
+    display: block;
+    padding: 1em;
+    color: #fff;
+    transition: 0.4s;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: #999;
+    transition: 0.4s;
+}
+
+@media all and (max-width: 990px) {
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .logo {
+        margin: 0;
+    }
+
+    .navigation {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .subtitle {
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .logo {
+        margin: .25em 0;
+        align-self: left;
+        /* align the logo to the left side of 'flex-container' */
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
+    .navigation a {
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid #666;
+    }
+
+    .navigation li:last-of-type a {
+        border-bottom: none;
+    }
+}
+
+
+/* banner personalizado - home */
+.banner_home {
     display: flex;
     flex-direction: column;
+    background: #5630ff;
+    color: #fff;
+    justify-content: space-evenly;
     align-items: center;
+    height: 300px;
+}
+
+.banner_home h1 {
+    font-size: 3em;
+}
+
+.banner_home p {
+    text-align: center;
+}
+
+
+/* banner personalizado - cadastro */
+.banner_cadastro {
+    display: flex;
+    flex-direction: column;
+    background: #bcbe23;
+    color: #fff;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 300px;
+}
+
+.banner_cadastro h1 {
+    font-size: 3em;
+}
+
+.banner_cadastro p {
+    text-align: center;
+}
+
+
+/* banner personalizado - contato */
+.banner_contato {
+    display: flex;
+    flex-direction: column;
+    background: #23be5e;
+    color: #fff;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 300px;
+}
+
+.banner_contato h1 {
+    font-size: 3em;
+}
+
+.banner_contato p {
+    text-align: center;
+}
+
+
+/* banner personalizado - login */
+.banner_login {
+    display: flex;
+    flex-direction: column;
+    background: #b62df5;
+    color: #fff;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 300px;
+}
+
+.banner_login h1 {
+    font-size: 3em;
+}
+
+.banner_login p {
+    text-align: center;
+}
+
+
+/* banner personalizado - servicos */
+.banner_servicos {
+    display: flex;
+    flex-direction: column;
+    background: #b62df5;
+    color: #fff;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 300px;
+}
+
+.banner_servicos h1 {
+    font-size: 3em;
+}
+
+.banner_servicos p {
+    text-align: center;
+}
+
+
+/* main / cards */
+.main {
+    display: flex;
     justify-content: center;
-
+    align-items: center;
+    flex-direction: column;
+    background: #eee;
+    height: auto;
+    padding: 10px;
+    color: #222;
 }
 
-.body-form h3{
-    color: #666;
+.subtitle {
+    font-size: 2.5em;
+    margin-top: 25px;
 }
+
+.cards-group {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid #999;
+    border-radius: 5px;
+    margin-top: 25px;
+    width: 250px;
+    height: auto;
+    padding: 25px;
+    background: #fff;
+    box-shadow: 3px 3px #666;
+}
+
+.card:hover {
+    background: #bbe965;
+}
+
+.card span {
+    font-size: 4em;
+    color: #000;
+    margin-top: 25px;
+}
+
+ .card-title {
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 5px;
+ }
+
+ .card-text {
+    margin-top: 0px;
+ }
+
+.separator {
+    display: flex;
+    align-self: center;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* 
+
+
+.icon-home {
+    display: flex;
+    color: #0d6efd;
+    font-size: 4em;
+    justify-content: center;
+} */
